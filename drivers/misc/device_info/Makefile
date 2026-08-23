@@ -1,0 +1,1 @@
+obj-$(CONFIG_SERENITY_DEVICE_IFNO)	+=  device_info.o

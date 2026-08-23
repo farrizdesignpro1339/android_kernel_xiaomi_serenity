@@ -1,0 +1,4 @@
+config SERENITY_DEVICE_IFNO
+	tristate	"SERENITY_DEVICE_IFNO"
+	help
+		define this config to compile device_info.c for device register

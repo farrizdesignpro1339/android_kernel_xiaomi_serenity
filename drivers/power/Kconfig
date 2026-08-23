@@ -1,0 +1,225 @@
+# SPDX-License-Identifier: GPL-2.0-only
+source "drivers/power/reset/Kconfig"
+source "drivers/power/supply/Kconfig"
+
+menuconfig SERENITY_CHG_V2
+	tristate "SERENITY charging V2 system"
+	default n
+	depends on I2C
+	select REGMAP_I2C
+	help
+	  Say Y here to enable SERENITY charging V2 system support
+
+config SERENITY_CHG
+	tristate "SERENITY CHARGER KO module"
+	default m
+	help
+	  Enables support for the serenity charging framework
+
+config SERENITY_CHARGER
+	bool "SERENITY_CHARGER"
+	default n
+	help
+	  Set Yes to support SERENITY_CHARGER features
+	  smart battery.
+	  Set No to disable SERENITY_CHARGER features
+	  smart battery.
+
+config SERENITY_CHG
+	tristate "SERENITY CHARGER KO module"
+	default m
+	help
+	  Enables support for the serenity charging framework
+
+config SERENITY_CHARGER_MTK
+	bool "SERENITY charger on MTK"
+	default n
+	help
+	  Say Yes here to declare charging system is on MTK
+	  Say No here to declare charging system is not on MTK
+
+config SERENITY_CHARGER_UNISOC
+	bool "SERENITY charger on UNISOC"
+	default n
+	help
+	  Say Yes here to declare charging system is on UNISOC
+	  Say No here to declare charging system is not on UNISOC
+
+config SERENITY_CHARGER_MTK_CHGIC
+	bool "SERENITY_CHARGER_MTK_CHG_IC"
+	default n
+	help
+	  Say Yes to use MTK platform charger ic
+	  Say No to use extern charger ic
+
+config SERENITY_CHARGER_MTK6983S
+	bool "SERENITY_CHARGER_MTK6983S"
+	default n
+	help
+	  Set yes to support SERENITY_CHARGER_MTK6983S features
+	  smart battery.
+	  Set No to disable SERENITY_CHARGER_MTK6983S features
+	  smart battery.
+
+config SERENITY_CHARGER_MTK6789S
+	bool "SERENITY_CHARGER_MTK6789S"
+	default n
+	help
+	  Set yes to support SERENITY_CHARGER_MTK6789S features
+	  smart battery.
+	  Set No to disable SERENITY_CHARGER_MTK6789S features
+	  smart battery.
+
+config SERENITY_CHARGER_MTK6895S
+	bool "SERENITY_CHARGER_MTK6895S"
+	default n
+	help
+	  Set yes to support SERENITY_CHARGER_MTK6895S features
+	  smart battery.
+	  Set No to disable SERENITY_CHARGER_MTK6895S features
+	  smart battery.
+
+config SERENITY_CHARGER_MTKAGING
+	bool "SERENITY_CHARGER_MTKAGING"
+	default n
+	help
+	  Set yes to support amend mtk aging algo features
+	  Set No to disable SERENITY_CHARGER_MTKAGING features
+
+config SERENITY_HVDCP_SUPPORT
+        bool "SERENITY_HVDCP_SUPPORT"
+        default n
+        help
+          Set yes to support hvdcp.
+
+config SERENITY_CHECK_CHARGERID_VOLT
+	bool "SERENITY_CHECK_CHARGERID_VOLT"
+	default n
+	help
+	  Set yes to support SERENITY_CHECK_CHARGERID_VOLT features
+	  smart battery.
+	  Set No to disable SERENITY_CHECK_CHARGERID_VOLT features
+	  smart battery.
+
+config SERENITY_4400MV_BATTERY_SUPPORT
+	bool "SERENITY_CHECK_CHARGERID_VOLT"
+	default n
+	help
+	  Set yes to support BATTERYID features
+	  smart battery.
+	  Set No to disable BATTERYID features
+	  smart battery.
+
+config SERENITY_CALL_MODE_SUPPORT
+	bool "SERENITY call mode support"
+	default n
+	help
+	  Say Y to enable support for the serenity call mode.
+
+config SERENITY_CALL_MODE_SUPPORT
+	bool "SERENITY call mode support"
+	help
+	  Say Y to enable support for the serenity call mode.
+
+config SERENITY_SHIP_MODE_SUPPORT
+	bool "SERENITY ship mode support"
+	default n
+	help
+	  Say Y to include support
+
+config SERENITY_SHORT_HW_CHECK
+	bool "SERENITY batt HW SHORT"
+	default n
+	help
+	  Say Y to include support
+
+config SERENITY_SMART_CHARGER_SUPPORT
+        bool "SERENITY Smart Charger support"
+        default n
+        help
+          Say Y to include support
+
+config SERENITY_SHORT_IC_CHECK
+	bool "SERENITY batt short "
+	help
+	  Say Y here to declare charging system is on MTK
+
+config SERENITY_CHG_DYNAMIC_CONFIG
+	bool "SERENITY_CHG_DYNAMIC_CONFIG"
+	default n
+	help
+	  Say Y to include support
+
+config MTK_KERNEL_POWER_OFF_CHARGING
+	bool "MTK kernel power off charging"
+	default n
+	help
+	  yes : support KPOC feature, power off charging would running by
+	  kernel and charging animation by kpoc service. no: not support KPOC
+	  feature.
+	  device won't enter charging mode if config is no.
+
+config SERENITY_MTK_DRM_GKI_NOTIFY_CHG
+        bool "SERENITY mtk drm gki notify chg"
+        default n
+        help
+          Say Y to include support
+
+#add from v2
+config SERENITY_CHG_IC_DEBUG
+	bool "Virtual IC layer debug interface"
+	default n
+	help
+	  Say Y here to declare virtual IC layer debug interface
+
+config SERENITY_CHG_MMS_DEBUG
+	bool "Message subscription layer debug interface"
+	default n
+	help
+	  Say Y here to declare message subscription layer debug interface
+
+config SERENITY_DA9313_CHARGER
+	bool "DA9313 support"
+	default n
+	help
+	  Say Y here to declare DA9313 support
+
+config SERENITY_MP2762_CHARGER
+	bool "MP2762 support"
+	default n
+	help
+	  Say Y here to declare MP2762 support
+
+config SERENITY_SGM41512_CHARGER
+	bool "SGM41512 support"
+	default n
+	help
+	  Say Y here to declare SGM41512 support
+
+config SERENITY_PD_MANAGER_CHARGER
+	bool "PD_MANAGER support"
+	default n
+	help
+	  Say Y here to declare PD_MANAGER support
+
+config SERENITY_ADSP_CHARGER
+	bool "ADSP support"
+	default n
+	help
+	  Say Y here to declare ADSP support
+
+config SERENITY_MT6375_CHARGER
+	bool "MT6375 debug support"
+	default n
+	help
+	  Say Y here to declare MT6375 debug support
+
+config SERENITY_CHARGER_OPTIGA
+	bool "SERENITY OPTIGA soc node"
+	help
+	  Say Y to include support
+
+config SERENITY_CHIP_SOC_NODE
+	bool "SERENITY chip soc node"
+	help
+	  Say Y to include support

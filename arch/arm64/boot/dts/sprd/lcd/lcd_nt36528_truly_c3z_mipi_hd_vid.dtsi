@@ -1,0 +1,208 @@
+// SPDX-License-Identifier: GPL-2.0-only
+/*
+ * Xiaomi Redmi A5 (serenity) NT36528 TRULY panel config
+ * Extracted from stock VGWIDXM dtbo (Panel_C3Z_43_02_0b_vid)
+ */
+/ {
+	fragment {
+		target-path = "/";
+		__overlay__ {
+			lcds {
+				lcd_nt36528_truly_c3z_mipi_hd_vid: lcd_nt36528_truly_c3z_mipi_hd_vid {
+					sprd,dsi-work-mode = <1>; /* video mode */
+					sprd,dsi-lane-number = <4>;
+					sprd,dsi-color-format = "rgb888";
+
+					sprd,phy-bit-clock = <1195200>; /* kbps */
+					sprd,phy-escape-clock = <20000>; /* kHz */
+					sprd,vrr-enable;
+					sprd,dpi-clk-div = <6>;
+					sprd,video-lp-cmd-enable = <1>;
+					sprd,hporch-lp-disable = <1>;
+					sprd,power-gpio-delay = <20>; /* ms */
+
+					sprd,width-mm = <70>;
+					sprd,height-mm = <160>;
+
+					sprd,esd-check-enable = <1>;
+					sprd,esd-check-mode = <3>;
+					sprd,esd-check-period = <3000>;
+					sprd,esd-check-num = <1>;
+					sprd,esd-check-register = <0x0A>;
+					sprd,esd-check-value = <0x9C>;
+					sprd,esd-check-register1 = <0xAB>;
+					sprd,esd-check-value1 = <0x00>;
+					sprd,esd-check-value2 = <0x00>;
+
+					sprd,reset-on-sequence = <1 10>, <0 5>, <1 5>, <0 5>, <1 20>;
+					sprd,reset-off-sequence = <1 5>;
+
+					sprd,initial-command = [
+					23 00 00 02 ff 23
+					23 00 00 02 fb 01
+					23 00 00 02 00 80
+					23 00 00 02 05 27
+					23 00 00 02 07 00
+					23 00 00 02 08 01
+					23 00 00 02 09 00
+					23 00 00 02 11 00
+					23 00 00 02 12 b9
+					23 00 00 02 15 e3
+					23 00 00 02 16 14
+					23 00 00 02 8d 01
+					23 00 00 02 10 00
+					23 00 00 02 2a 3f
+					23 00 00 02 30 ff
+					23 00 00 02 31 fe
+					23 00 00 02 32 fd
+					23 00 00 02 33 fc
+					23 00 00 02 34 fa
+					23 00 00 02 35 f8
+					23 00 00 02 36 f7
+					23 00 00 02 37 f3
+					23 00 00 02 38 f0
+					23 00 00 02 39 ee
+					23 00 00 02 3a ec
+					23 00 00 02 3b ea
+					23 00 00 02 3d e9
+					23 00 00 02 3f e7
+					23 00 00 02 40 e6
+					23 00 00 02 41 e5
+					23 00 00 02 45 ff
+					23 00 00 02 46 fd
+					23 00 00 02 47 fb
+					23 00 00 02 48 f7
+					23 00 00 02 49 f3
+					23 00 00 02 4a eb
+					23 00 00 02 4b e3
+					23 00 00 02 4c b3
+					23 00 00 02 4d b0
+					23 00 00 02 4e af
+					23 00 00 02 4f ae
+					23 00 00 02 50 ac
+					23 00 00 02 51 ab
+					23 00 00 02 52 aa
+					23 00 00 02 53 65
+					23 00 00 02 54 63
+					23 00 00 02 58 ff
+					23 00 00 02 59 fd
+					23 00 00 02 5a fc
+					23 00 00 02 5b f9
+					23 00 00 02 5c f6
+					23 00 00 02 5d f2
+					23 00 00 02 5e eb
+					23 00 00 02 5f dd
+					23 00 00 02 60 d9
+					23 00 00 02 61 cd
+					23 00 00 02 62 c9
+					23 00 00 02 63 c6
+					23 00 00 02 64 c2
+					23 00 00 02 65 be
+					23 00 00 02 66 b2
+					23 00 00 02 67 b0
+					23 00 00 02 ff 27
+					23 00 00 02 fb 01
+					23 00 00 02 d0 31
+					23 00 00 02 d1 25
+					23 00 00 02 d2 30
+					23 00 00 02 d4 08
+					23 00 00 02 de c3
+					23 00 00 02 df 02
+					23 00 00 02 ff 2a
+					23 00 00 02 fb 01
+					23 00 00 02 1e 0f
+					23 01 00 02 ff 10
+					23 00 00 02 fb 01
+					23 00 00 03 51 00 00
+					23 00 00 02 53 24
+					23 00 00 03 68 02 01
+					23 00 00 02 55 00
+					13 78 00 01 11
+					13 14 00 01 29
+				];
+
+					sprd,sleep-in-command = [
+					23 14 00 03 53 00 00
+					13 14 00 01 28
+					13 78 00 01 10
+				];
+
+					sprd,sleep-out-command = [
+					13 78 00 01 11
+					13 14 00 01 29
+				];
+
+					sprd,tp-proximity-command = [
+					23 00 00 02 ff 10
+					23 00 00 02 fb 01
+					13 0a 00 01 28
+				];
+
+					sprd,cabc-off-mode = [
+					23 00 00 02 55 00
+				];
+
+					sprd,cabc-ui-mode = [
+					23 00 00 02 55 01
+				];
+
+					sprd,cabc-mov-mode = [
+					23 00 00 02 55 03
+				];
+
+					sprd,cabc-still-mode = [
+					23 00 00 02 55 02
+				];
+
+					sprd,dimming-on = [
+					23 00 00 02 53 2c
+				];
+
+					display-timings {
+						native-mode = <&nt36528_truly_timing0>;
+						nt36528_truly_timing0: timing0 {
+							clock-frequency = <199200000>;
+							hactive = <720>;
+							vactive = <1640>;
+							hback-porch = <80>;
+							hfront-porch = <24>;
+							vback-porch = <32>;
+							vfront-porch = <2336>;
+							hsync-len = <4>;
+							vsync-len = <2>;
+						};
+						nt36528_truly_timing1: timing1 {
+							clock-frequency = <199200000>;
+							hactive = <720>;
+							vactive = <1640>;
+							hback-porch = <80>;
+							hfront-porch = <24>;
+							vback-porch = <32>;
+							vfront-porch = <999>;
+							hsync-len = <4>;
+							vsync-len = <2>;
+						};
+						nt36528_truly_timing2: timing2 {
+							clock-frequency = <199200000>;
+							hactive = <720>;
+							vactive = <1640>;
+							hback-porch = <80>;
+							hfront-porch = <24>;
+							vback-porch = <32>;
+							vfront-porch = <331>;
+							hsync-len = <4>;
+							vsync-len = <2>;
+						};
+					};
+					oled-backlight {
+						default-brightness-level = <500>;
+						sprd,max-level = <4095>;
+						brightness-levels = [
+							39 00 00 03 51 00 00
+						];
+					};
+				};
+			};
+		};
+	};
+};
