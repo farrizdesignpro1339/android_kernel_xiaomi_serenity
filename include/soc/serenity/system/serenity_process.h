@@ -6,8 +6,8 @@
 ** Version: 1.0
 ****************************************************************/
 
-#ifndef _OPPO_PROCESS_H
-#define _OPPO_PROCESS_H
+#ifndef _SERENITY_PROCESS_H
+#define _SERENITY_PROCESS_H
 
 static inline bool is_zygote_process(struct task_struct *t)
 {
@@ -54,13 +54,13 @@ static inline bool is_key_process(struct task_struct *t) {
 	return false;
 }
 
-static inline bool oppo_is_android_core_group(struct pid *pgrp)
+static inline bool serenity_is_android_core_group(struct pid *pgrp)
 {
 	struct task_struct *p;
 
 	do_each_pid_task(pgrp, PIDTYPE_PGID, p) {
 		if ((!strcmp(p->comm, "zygote")) || (!strcmp(p->comm, "main"))) {
-			printk("oppo_is_android_core_group: find zygote will be hungup, ignore it \n");
+			printk("serenity_is_android_core_group: find zygote will be hungup, ignore it \n");
 			return true;
 		}
 	} while_each_pid_task(pgrp, PIDTYPE_PGID, p);
@@ -80,4 +80,4 @@ static inline bool is_critial_process(struct task_struct *t) {
 		return false;
 	}
 }
-#endif /*_OPPO_PROCESS_H */
+#endif /*_SERENITY_PROCESS_H */

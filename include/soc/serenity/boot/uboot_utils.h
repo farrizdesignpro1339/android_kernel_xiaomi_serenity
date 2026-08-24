@@ -2,8 +2,8 @@
 /*
  * Copyright (C) 2018-2020 Serenity. All rights reserved.
  */
-#ifndef __OPPO_UBOOT_UTIL__
-#define __OPPO_UBOOT_UTIL__
+#ifndef __SERENITY_UBOOT_UTIL__
+#define __SERENITY_UBOOT_UTIL__
 
 #include <linux/kmsg_dump.h>
 #include <soc/qcom/minidump.h>
@@ -159,4 +159,4 @@ static inline bool back_kmsg_dump_get_buffer(struct kmsg_dumper *dumper, bool sy
 }
 #endif
 
-#endif/*__OPPO_UBOOT_UTIL__*/
+#endif/*__SERENITY_UBOOT_UTIL__*/

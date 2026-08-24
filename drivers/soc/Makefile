@@ -30,6 +30,5 @@ obj-y				+= ti/
 obj-$(CONFIG_ARCH_U8500)	+= ux500/
 obj-$(CONFIG_PLAT_VERSATILE)	+= versatile/
 obj-y				+= xilinx/
-#obj-m	+= oppo/
-obj-$(CONFIG_SERENITY_FEATURE_PHOENIX) += serenity/system/oppo_phoenix/
+obj-$(CONFIG_SERENITY_FEATURE_PHOENIX) += serenity/system/serenity_phoenix/
 obj-$(CONFIG_SERENITY_FEATURE_HUNG_TASK_ENHANCE) += serenity/system/hung_task_enhance/

@@ -1,7 +1,7 @@
 /**********************************************************************************
-* Copyright (c)  2008-2015  Guangdong OPPO Mobile Comm Corp., Ltd
+* Copyright (c)  2008-2015  Guangdong SERENITY Mobile Comm Corp., Ltd
 * VENDOR_EDIT
-* Description:    OPPO Healthinfo Monitor
+* Description:    SERENITY Healthinfo Monitor
 *                          Record Kernel Resourse Abnormal Stat
 * Version    : 2.0
 * Date       : 2018-11-01
@@ -9,8 +9,8 @@
 * <version>           <date>                <author>                            <desc>
 ***********************************************************************************/
 
-#ifndef _OPPO_HEALTHINFO_H_
-#define _OPPO_HEALTHINFO_H_
+#ifndef _SERENITY_HEALTHINFO_H_
+#define _SERENITY_HEALTHINFO_H_
 
 #include <linux/latencytop.h>
 #include <linux/sched.h>
@@ -20,11 +20,11 @@
 #include <linux/proc_fs.h>
 #include <linux/fs.h>
 #include <linux/slab.h>
-#include <linux/oppo_healthinfo/oppo_fg.h>
+#include <linux/serenity_healthinfo/serenity_fg.h>
 
-#ifdef CONFIG_OPPO_MEM_MONITOR
-#include <linux/oppo_healthinfo/memory_monitor.h>
-#endif /*CONFIG_OPPO_MEM_MONITOR*/
+#ifdef CONFIG_SERENITY_MEM_MONITOR
+#include <linux/serenity_healthinfo/memory_monitor.h>
+#endif /*CONFIG_SERENITY_MEM_MONITOR*/
 
 #define ohm_err(fmt, ...) \
         printk(KERN_ERR "[OHM_ERR][%s]"fmt, __func__, ##__VA_ARGS__)
@@ -96,5 +96,5 @@ extern void ohm_schedstats_record(int sched_type, struct task_struct *task, u64 
 extern int ohm_get_cur_cpuload(bool ctrl);
 extern void ohm_action_trig_with_msg(int type, char *msg);
 
-#endif /* _OPPO_HEALTHINFO_H_*/
+#endif /* _SERENITY_HEALTHINFO_H_*/
 

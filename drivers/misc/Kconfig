@@ -526,6 +526,5 @@ source "drivers/misc/habanalabs/Kconfig"
 source "drivers/misc/uacce/Kconfig"
 source "drivers/misc/pvpanic/Kconfig"
 source "drivers/misc/vibrator/Kconfig"
-source "drivers/misc/hqhardwareinfo/Kconfig"
 source "drivers/misc/device_info/Kconfig"
 endmenu

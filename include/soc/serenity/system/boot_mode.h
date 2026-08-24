@@ -3,14 +3,14 @@
  * Copyright (C) 2018-2020 Serenity. All rights reserved.
  */
 /************************************************************************************
-** File: - android\kernel\arch\arm\mach-msm\include\mach\oppo_boot.h
+** File: - android\kernel\arch\arm\mach-msm\include\mach\serenity_boot.h
 ** 
 ** Description:  
 **     change define of boot_mode here for other place to use it
 ** Version: 1.0 
 ************************************************************************************/
-#ifndef _OPPO_BOOT_H
-#define _OPPO_BOOT_H
+#ifndef _SERENITY_BOOT_H
+#define _SERENITY_BOOT_H
 enum{
         MSM_BOOT_MODE__NORMAL,
         MSM_BOOT_MODE__FASTBOOT,
@@ -35,7 +35,7 @@ extern bool qpnp_is_power_off_charging(void);
 /*add for detect charger when reboot */
 extern bool qpnp_is_charger_reboot(void);
 #endif /*SERENITY_BUG_STABILITY*/
-#endif  /*_OPPO_BOOT_H*/
+#endif  /*_SERENITY_BOOT_H*/
 
 #ifdef SERENITY_BUG_STABILITY
 /*Add for kernel monitor whole bootup*/

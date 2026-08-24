@@ -1,6 +1,6 @@
 #change 'y' to 'n', if you want fo close phoenix feature
 config SERENITY_FEATURE_PHOENIX
-    tristate "oppo phoenix project"
+    tristate "serenity phoenix project"
     default y
     help
-      define this config to init oppo phoenix project.
+      define this config to init serenity phoenix project.

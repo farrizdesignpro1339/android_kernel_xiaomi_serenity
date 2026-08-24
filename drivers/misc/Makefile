@@ -64,6 +64,5 @@ obj-$(CONFIG_UID_SYS_STATS)	+= uid_sys_stats.o
 obj-$(CONFIG_SPRD_UID)		+= sprd_uid.o
 obj-$(CONFIG_OPEN_DICE)		+= open-dice.o
 obj-$(CONFIG_SPRD_SOCID)	+= sprd_soc_id.o
-obj-$(CONFIG_HQ_HARDWARE_INFO)	+= hqhardwareinfo/
 obj-$(CONFIG_SERENITY_DEVICE_IFNO)	+= device_info/
 obj-$(CONFIG_OP_RF_CABLE_MONITOR)	+= op_rf_cable_monitor.o
