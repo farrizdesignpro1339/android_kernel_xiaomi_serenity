@@ -1,3 +1,6 @@
+# Xiaomi Redmi A5 (serenity): thin LTO (full LTO needs ~25GB RAM at vmlinux link)
+CONFIG_LTO_CLANG_THIN=y
+# CONFIG_LTO_CLANG_FULL is not set
 # Xiaomi Redmi A5 (serenity): clang r450784e frame sizes
 CONFIG_FRAME_WARN=4096
 CONFIG_NXP_NFC_I2C=m
