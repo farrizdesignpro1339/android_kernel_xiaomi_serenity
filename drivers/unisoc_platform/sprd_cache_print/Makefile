@@ -1,1 +1,0 @@
-obj-$(CONFIG_SPRD_CACHE_PRINT) += sprd_cache_print.o

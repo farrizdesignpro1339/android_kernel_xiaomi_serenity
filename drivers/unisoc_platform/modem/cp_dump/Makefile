@@ -1,1 +1,0 @@
-obj-$(CONFIG_UNISOC_CP_DUMP)	+= sprd_cp_dump.o
