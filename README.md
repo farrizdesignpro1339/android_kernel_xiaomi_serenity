@@ -1,7 +1,10 @@
 # android_kernel_xiaomi_serenity
 
-Kernel source for Xiaomi Redmi A5 / POCO C71 (serenity)
+Kernel: Xiaomi kernel changes for POCO C71 / REDMI A5 Android W
 
-- SoC: Unisoc UMS9230
-- Base: Xiaomi Redmi A7 Pro (arctic) vendor kernel
-- Kernel: 5.15.178 (GKI, Trick or Treat)
+The Patch based on SPRD release TAG: 4G_MODEM_22B_W24.52.2_P34
+
+The kernel config file used is serenity.fragment & serenity_debug.fragment
+
+Signed-off-by: farrizdesignpro1339 <farrizdesignpro1339@users.noreply.github.com>
+Change-Id: I7cd5969396383292dbce58c9edd4399ee90fd86a
