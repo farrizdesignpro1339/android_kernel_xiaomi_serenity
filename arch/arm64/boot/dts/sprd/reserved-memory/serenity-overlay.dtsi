@@ -1,0 +1,27 @@
+// SPDX-License-Identifier: (Licenseref-Unisoc-General-1.0 OR GPL-2.0-only)
+/*
+ * serenity-overlay.dtsi - Reserved memory for Serenity
+ *
+ * Xiaomi Redmi A5 / POCO C71 (serenity)
+ * Unisoc T7250 (T615) / UMS9230
+ *
+ * Copyright 2023 Unisoc(Shanghai) Technologies Co.Ltd
+ */
+
+&reserved_memory {
+	/*Increase support for protected_heap*/
+	protected_reserved: protected-mem@80003000 {
+		reg = <0x0 0x80003000 0x0 0x00002000>;
+	};
+
+	oemcrypto_reserved: oemcrypto@b6100000 {
+		reg = <0x0 0xb7100000 0x0 0x01100000>;
+	};
+
+	/*Set 8M after widevine to prevent memory out of bounds*/
+	widevine_reserved: widevine@de800000 {
+		compatible = "shared-dma-pool";
+		reg = <0x0 0xde800000 0x0 0x12000000>;
+		reusable;
+	};
+};
