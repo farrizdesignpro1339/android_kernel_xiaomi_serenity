@@ -1,6 +1,6 @@
 # android_kernel_xiaomi_serenity
 
-Kernel: Xiaomi kernel changes for POCO C71 / REDMI A5 Android W
+Kernel: Xiaomi kernel changes for POCO C71 / REDMI A5 Android V
 
 The Patch based on SPRD release TAG: 4G_MODEM_22B_W24.52.2_P34
 
