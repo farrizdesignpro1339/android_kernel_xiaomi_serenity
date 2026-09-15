@@ -1,5 +1,7 @@
 GCOV_PROFILE = ${CONFIG_SPRD_SFP_GCOV}
 
+ccflags-y += -I$(srctree)/$(src)
+
 obj-$(CONFIG_SPRD_SFP_SUPPORT)  += sfp_core.o
 
 sfp_core-objs := sfp_mgr.o sfp_fwd.o sfp_intf.o sfp_proc.o \

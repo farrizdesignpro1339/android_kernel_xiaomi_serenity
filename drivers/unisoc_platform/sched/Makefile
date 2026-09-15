@@ -3,6 +3,8 @@
 KCOV_INSTRUMENT := n
 KCSAN_SANITIZE := n
 
+ccflags-y += -I$(srctree)/$(src)
+
 obj-$(CONFIG_UNISOC_SCHED) += unisoc-sched.o
 unisoc-sched-y += core.o sysctl.o fair.o rt.o cpuload.o
 unisoc-sched-$(CONFIG_SCHED_WALT) += walt.o walt_freq.o

@@ -3,6 +3,8 @@
 KCOV_INSTRUMENT := n
 KCSAN_SANITIZE := n
 
+ccflags-y += -I$(src)
+
 obj-$(CONFIG_UNISOC_IODEBUG) += kprobe_block.o
 obj-$(CONFIG_UNISOC_IOWAIT) += kprobe_iowait.o
 obj-$(CONFIG_UNISOC_IOLIMIT) += iolimit.o

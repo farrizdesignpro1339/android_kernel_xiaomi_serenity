@@ -124,7 +124,7 @@ void swcq_debug_update(int type, struct mmc_request *mrq, struct mmc_swcq *swcq)
 			swcq->cmdq_mode, swcq->recovery_cnt,
 			atomic_read(&swcq->qcnt), atomic_read(&swcq->cmdq_cnt));
 
-		pr_err("|__swcq    mmc0: cmd resp err cnt %d, %d, %d, %d, %d, %d, %d\n",
+		pr_err("|__swcq    mmc0: cmd resp err cnt %llu, %llu, %llu, %llu, %llu, %llu, %llu\n",
 			swcq->r1_address_error, swcq->r1_block_len_error, swcq->r1_wp_violation,
 			swcq->r1_card_ecc_failed, swcq->r1_cc_error, swcq->r1_error,
 			swcq->r1_out_of_range);

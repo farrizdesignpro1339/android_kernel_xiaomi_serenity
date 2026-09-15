@@ -74,7 +74,7 @@ struct ChargerPartition {
 	char *part_info_part_name;
 	bool is_charger_partition_rdy;
 };
-static struct ChargerPartition *charger_partition;
+static struct ChargerPartition *charger_partition __maybe_unused;
 /* 读写接口 */
 int charger_partition_read(const char *partition_name, void *buf, size_t size, loff_t offset);
 int charger_partition_write(const char *partition_name, const void *buf, size_t size, loff_t offset);

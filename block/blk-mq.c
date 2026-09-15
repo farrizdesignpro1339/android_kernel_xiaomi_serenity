@@ -931,8 +931,8 @@ static bool blk_mq_req_expired(struct request *rq, unsigned long *next)
 	if (unlikely(deadline == 0))
 		return false;
 	if (time_after_eq(jiffies, deadline)) {
-		pr_err("%s: jiffies: %lu, ns: %lu, deadline: %lu, rq: %0x", __func__,
-			jiffies, ktime_get_ns(), deadline, (unsigned long)rq);
+		pr_err("%s: jiffies: %lu, ns: %llu, deadline: %lu, rq: %px", __func__,
+			jiffies, ktime_get_ns(), deadline, rq);
 		return true;
 	}
 #else

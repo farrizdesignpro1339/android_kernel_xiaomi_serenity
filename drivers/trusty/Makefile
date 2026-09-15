@@ -2,6 +2,8 @@
 # Makefile for trusty components
 #
 
+ccflags-y += -I$(srctree)/$(src)
+
 obj-$(CONFIG_TRUSTY) += trusty.o
 trusty-y := trusty-core.o trusty-mem.o
 

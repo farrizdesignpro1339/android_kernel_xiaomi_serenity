@@ -27,7 +27,7 @@
 #include <linux/regmap.h>
 #include <linux/seq_file.h>
 #include <linux/uaccess.h>
-#include <../sysdump/unisoc_sysdump.h>
+#include "../sysdump/unisoc_sysdump.h"
 
 #ifdef pr_fmt
 #undef pr_fmt

@@ -10,6 +10,8 @@
 # if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 # MA 02110-1301, USA.
 
+ccflags-y += -I$(srctree)/$(src)
+
 obj-$(CONFIG_UNISOC_BINDER) += unisoc_binder.o
 unisoc_binder-$(CONFIG_UNISOC_BINDER_SCHED) += unibinder.o
 unisoc_binder-$(CONFIG_UNISOC_BINDER_NETLINK) += unibinder_netlink.o

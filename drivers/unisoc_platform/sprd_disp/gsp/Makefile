@@ -1,5 +1,7 @@
 # SPDX-License-Identifier: GPL-2.0
 
+ccflags-y += -I$(srctree)/$(src)
+
 sprd-gsp-$(CONFIG_UNISOC_GSP) += gsp_r8p0/gsp_r8p0_core.o \
 	gsp_r9p0/gsp_r9p0_core.o \
 	gsp_coef_cal.o

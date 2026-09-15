@@ -481,7 +481,7 @@ int sc27xx_typec_set_mode(int mode)
 	val |= mode;
 	ret = regmap_write(sc->regmap, sc->base + sc->var_data->mode, val);
 	if (ret) {
-		dev_info(sc->dev, "error update mode!\n", __func__);
+		dev_info(sc->dev, "error update mode!\n");
 		return ret;
 	}
 	return ret;

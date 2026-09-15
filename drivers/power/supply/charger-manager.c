@@ -8704,7 +8704,7 @@ static ssize_t enable_pfm_store(struct device *dev,
 				  struct device_attribute *attr, const char *buf,
 				  size_t count)
 {
-	bool value = 0;
+	int value = 0;
 	int ret = 0;
 	if (IS_ERR_OR_NULL(g_cm))
 		return -ENOMEM;
@@ -9005,7 +9005,7 @@ static ssize_t shipmode_count_reset_store(struct device *dev,
 				  struct device_attribute *attr, const char *buf,
 				  size_t count)
 {
-	bool shipmode_flag = 0;
+	int shipmode_flag = 0;
 	int ret = 0;
 
 	if (IS_ERR_OR_NULL(g_cm))
@@ -9015,7 +9015,7 @@ static ssize_t shipmode_count_reset_store(struct device *dev,
 	if (!ret)
 		return -EINVAL;
 
-	g_cm->shipmode_flag = shipmode_flag;
+	g_cm->shipmode_flag = !!shipmode_flag;
 	return count;
 }
 static struct device_attribute shipmode_count_reset_attr =
