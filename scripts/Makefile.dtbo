@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# Device Tree Blob overlay build rules
+
+ifneq ($(dtb-y),)
+# Generate __symbols__ to allow overlay resolution
+DTC_FLAGS += -@
+endif
+
+%.dtbo: %.dts FORCE
+	$(call if_changed_dep,dtc)
