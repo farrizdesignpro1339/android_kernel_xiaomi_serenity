@@ -1207,7 +1207,7 @@ static int sgm41513_charger_get_current(struct sgm41513_charger_info *info, u32 
 	reg_val &= SGM41513_REG_ICHG_MASK;
 	reg_val = reg_val >> SGM41513_REG_ICHG_SHIFT;
 	if (reg_val >= ARRAY_SIZE(sgm41513_ichg))
-		reg_val = sgm41513_ichg[ARRAY_SIZE(sgm41513_ichg) - 1];
+		reg_val = ARRAY_SIZE(sgm41513_ichg) - 1;
 
 	*cur = sgm41513_ichg[reg_val] * 1000;
 	return 0;
